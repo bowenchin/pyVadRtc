@@ -137,7 +137,7 @@ def vad_collector(sample_rate, frame_duration_ms,
                 voiced_frames = []
     if triggered:
         sys.stdout.write('-(%s)' % (frame.timestamp + frame.duration))
-        if (end_time is 0):
+        if (end_time == 0):
             end_time = frame.timestamp
             speech_duration = end_time - gap_time
     sys.stdout.write('\n')
